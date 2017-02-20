@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <title>确认订单</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/payment.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+  (function ($, document) {
+    var fontSize = $(window).width() / 10;
+    $("html").css('font-size', fontSize + 'px');
+  })(jQuery, document);
+</script>
+
+<div class="container">
+	<!--===========支付页面第一页=============-->
+ <div id="scroller" class="scroll-area">	
+  <div class="series-bar">
+    <div class="banner-box">
+      <img class="banner-bg" src="img/payment/zfubanner.png"
+           srcset="img/payment/zfubanner2.png 2x, img/payment/zfubanner3.png 3x" alt="">
+    
+ <div class="goods-containe-san">
+			<div class="goods-left-con">
+				<div class="detail-bo">
+					
+			  <div class="container-top">
+	   	 	       <div class="left">
+	   	 		<img class="banner-yi" src="img/payment/zfudindan_2.png"
+           srcset="img/payment/zfudindan_2.png 2x, img/payment/zfudindan_3.png 3x" alt="">
+	   	 	</div>
+	   	 	<div class="right">
+	   	 	   <div class="status-a">订单号：DZD2017011017011255520102</div>	
+	   	 	</div>
+	   	  </div>
+	   	  
+	   	  <div class="bottom">
+	   	 	<div class="left-img">
+	   	 			<img class="banner-er" src="img/payment/zfucping.png"
+           srcset="img/payment/zfucping_2.png 2x, img/payment/zfucping_3.png 3x" alt="">
+	   	 	</div>
+	   	 	
+	   	 	<div class="right-fonts">
+	   	 	   <div class="status-b">商品名称:</div>	
+	   	 	   <div class="status-b">自由组合,</div>
+	   	 	   <div class="status-b font-color">299元   5000条</div>	
+	   	 	</div>
+	   	 </div>
+	   	  
+				</div>
+			</div>
+			
+</div>
+
+ <div class="goods-cont">
+    <div class="goods-right-con">
+				<!--<img class="banner-san" src="img/payment/zfugma.png"
+           srcset="img/payment/zfugma.png 2x, img/payment/zfugma.png 3x" alt="">-->
+				<div class="detail-bx">
+					 <div class="top">
+	   	  <form name="form-put" method="post" action="" class="form-put">
+	   	  	<dl class="dl-l">
+             	<dd class="a-font">
+             	   支付方式：
+               </dd>
+            </dl>
+	   	  	
+	   	 	<dl class="dl-z">
+             	<dd class="form-group">
+             	  <img class="banner-wu" src="img/payment/zfuzfubao_2.png"
+           srcset="img/payment/zfuzfubao_2.png 2x, img/payment/zfuzfubao_3.png 3x" alt="">
+             	   <label class="lab">支付</label>
+                   <input id="dada" type="radio" name="sex" checked="checked"> 
+             </dd>
+             <dd class="form-group form-wei" id="for">
+             	 <img class="banner-wu" src="img/payment/zfuweixun_2.png"
+           srcset="img/payment/zfuweixun_2.png 2x, img/payment/zfuweixun_3.png 3x" alt="">
+             	   <label class="lab">微信</label>
+                   <input id="dada" type="radio" name="sex" checked="checked">
+             </dd>
+       </dl>
+       
+       <dl class="dl-l">
+         <dd class="a-font">充值号码：</dd>
+       </dl>
+       <dl class="dl-z dl-q">
+         <dd class="form-group">
+          <input type="text" placeholder="请输入您的号码" class="put"> 
+         </dd>
+       </dl>
+        
+         </form>
+     </div>
+				</div>
+			</div>
+ </div>			
+ <p class="font-one font-b">注意！！！充值号码必须为本人手机号码为账号</p>
+ </div>
+</div><!--container-->
+</div>
+<!--弹窗功能-->
+<div class="popup-add-color">
+  <div class="bg-black"></div>
+  <div class="popup-add-box-container">
+    <div class="popup-add-box-center">
+      <div class="popup-add-box">
+      	<div class="add-picture-color-box">
+          <div class="add-picture-row">
+            <img class="banner-wei" src="img/payment/zfuerwma_3.png"
+           srcset="img/payment/zfuerwma_3.png 2x, img/payment/zfuerwma_3.png 3x" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="btn-finish">完&nbsp;成</div>
+    </div>
+  </div>
+</div>
+<!--结束弹窗功能-->
+</body>
+<script type="text/javascript">
+   (function ($, document) {
+    function mainResize() {
+      var fontSize = $(window).width() / 10;
+      $("html").css('font-size', fontSize + 'px');
+    }
+
+    mainResize();
+
+    $(window).resize(function () {
+      mainResize();
+    });
+    
+    $('#for').on('click', function () {
+      $('.popup-add-color').show();
+    });
+    $('.btn-finish').on('click', function () {
+      $('.popup-add-color').hide();
+    });
+    
+    $('#scroller>div').hide();
+    $('.series-bar').show();
+    
+
+  })(jQuery, document);
+</script>
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <title>首页</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index-follow-friends.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <script src="js/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+  (function ($, document) {
+    var fontSize = $(window).width() / 10;
+    $("html").css('font-size', fontSize + 'px');
+  })(jQuery, document);
+</script>
+
+<!--==================header标题==================-->
+<div class="header box-shadow-bg">
+	 <div class="tag-select-container">
+    <ul>
+      <li class="lestone active lestone-a tag click">
+        <div class="tag active nav-home">首页</div>
+      </li>
+      <li class="lestone lestone-b">
+        <div id="follow_friends" class="tag nav-data">千讯数据</div>
+      </li>
+      <li class="lestone lestone-c">
+        <div class="tag nav-pic">价格</div>
+      </li>
+      <li class="lestone lestone-d">
+        <div class="tag nav-about">联系我们</div>
+      </li>
+      <li class="lesttuo lest-li">
+        <div class="tag-tuo">注册</div>
+      </li>
+      <li class="lesttuo">
+        <div class="tag-three">登入</div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--===============end header标题==================-->
+<!--==============goods-container===============-->
+<div class="goods-container">
+	  
+<!--=================千讯数据第一页===================-->
+ <div id="scroller" class="scroll-area">
+ 	<div class="goods-container-home">
+    <div class="pull-down-box">
+      <p class="font-one"><span>千讯</span>仅需三步免费试发</p>
+    </div>
+    <form id="pull-down-box" name="myform" method='post' action='' onsubmit="return checkUser();">
+    	 <input type="text"  placeholder="请输入您的手机号" class="fonts-one"/>
+    	 <input type="text"  placeholder="请输入您想发送的内容" class="fonts-one"/>
+       <!-- <input type="button" value="点击发送" class="font-ones"/>-->
+    	 <a class="font-ones">点击发送</a>
+    </form>
+    <div class="social">
+        <p class="font-one font-b">免费获取试发后我们将有客服联系你</p>
+        <img class="banner-bg" src="img/shou/cyeidnaobeij_b.png"
+           srcset="img/shou/cyeidnaobeij_b.png 2x, img/shou/cyeidnaobeij_b.png 3x" alt="">
+        <img class="banner-bg-img" src="img/shou/cyeiyunduo.png"
+           srcset="img/shou/cyeiyunduo_2.png 2x, img/shou/cyeiyunduo_3.png 3x" alt="">
+    </div>
+
+    <div class="goods-container-button">
+      <div class="goods-left-container">
+    	  <div class="goods-detail-box">
+    	  	<form action="">
+    	  	 <input type="button" name="" id="" value="APP验证码" class="input-width"/>
+    	  	</form>
+    		</div>
+    	   <div class="goods-detail-box">
+    		  <form action="">
+    	  	 <input type="button" name="" id="" value="网站验证码" class="input-width"/>
+    	  	</form>
+    	  </div>
+    	   <div class="goods-detail-box  detail-box">
+    		  <form action="">
+    	  	 <input type="button" name="" id="" value="网站验证码" class="input-width"/>
+    	  	</form>
+    	  </div>
+      </div>
+      <div class="goods-right-container">
+    	  <div class="goods-detail-box">
+    		  <form action="">
+    	  	 <input type="button" name="" id="" value="订单通知" class="input-width"/>
+    	  	</form>
+    	  </div>
+    	  <div class="goods-detail-box">
+    		  <form action="">
+    	  	 <input type="button" name="" id="" value="ERP短信" class="input-width"/>
+    	  	</form>
+    	  </div>
+    	  <div class="goods-detail-box detail-box">
+    		  <form action="">
+    	  	 <input type="button" name="" id="" value="行业营销" class="input-width"/>
+    	  	</form>
+    	  </div>
+      </div>
+   </div>
+    
+  <div class="img-bg">
+   <div class="search-good-bar">
+   	<div class="search-good-kind1"><img class="ban-bg" src="img/shou/cyeitj.png"
+           srcset="img/shou/cyeitj_2.png 2x, img/shou/cyeitj_3.png 3x" alt="" /><p>精品推荐</p></div>
+    <div class="search-good-kind2">...</div>
+   </div>
+    <div class="goods-container-center">
+    <div class="goods-left-container">
+       <img class="goods-img" src="img/shou/cyei1069tongdao.png" srcset="img/shou/cyei1069tongdao_2.png 2x, img/shou/cyei1069tongdao_3.png 3x">
+    </div>
+    <div class="goods-right-container">
+    	<img class="goods-img" src="img/shou/cyeikafatongdao.png" srcset="img/shou/cyeikafatongdao_2.png 2x, img/shou/cyeikafatongdao_3.png 3x">
+    </div>
+   </div>
+  </div> 
+ </div>
+ <!--弹窗功能-->
+<div class="popup-add-color">
+  <div class="bg-black"></div>
+  <div class="popup-add-box-container">
+    <div class="popup-add-box-center">
+      <div class="popup-add-box">
+      	<div class="jifen">
+		      <div class="left-a">请输入验证码</div>
+		      <div class="btn-finish" id="colse_a"><img src="img/shou/colse_2.png" srcset="img/shou/colse_2.png 2x, img/shou/colse_2.png 3x"></div>
+	</div>
+        <div class="cont_a">
+          <form action="" class="form-content">
+           <dl>
+           	<dd class="form-group-put">
+              <input type="email" class="form-control-input" placeholder="">
+              <!--<input type="submit" class="form-control-input input-form">-->
+              <div class="form-control-input input-form"><img class="i-img" src="img/shou/" srcset="img/shou/ 2x, img/shou/ 3x"><a href="" class="cl-p">换一张</a></div>
+            </dd>
+          </dl>
+        </form>
+      </div>
+        <div class="cont_b">
+         <form action="" class="form-content">
+           <dl>
+      	     <dd class="form-group">
+               <input type="submit" value="确定" class="form-contro">
+               <input type="submit" value="取消" class="form-contro form-sub">
+            </dd>
+          </dl>
+         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--=================千讯数据第二页===================-->
+<div class="goods-container-er">
+		<div class="banner-box">
+			<img class="banner-bg-er" src="img/qianxun/qxunshujvbanner.png" srcset="img/qianxun/qxunshujvbanner_2.png 2x, img/qianxun/qxunshujvbanner_2.png 3x" alt="">
+		</div>
+		
+		<div class="goods-containe-er">
+			<div class="goods-left-container">
+				<div class="goods-detail-bo">
+					<img class="goods-img-width" src="img/qianxun/qxungszz.png" srcset="img/qianxun/qxungszz@2.png 2x, img/qianxun/qxungszz@3.png 3x">
+					 	<div class="goods-img-width">
+					 		 <div class=""></div>
+					 	</div>
+					<a href="" class="qianxun-img">
+							<img class="goods-img-width" src="img/qianxun/qxunchakcping.png" srcset="img/qianxun/qxunchakcping_2.png 2x, img/qianxun/qxunchakcping_3.png 3x" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="goods-right-container">
+				<div class="goods-detail-bo">
+					 <a href="" class="qianxun-img">
+							<img class="goods-img-width" src="img/qianxun/qxunlxwomen.png" srcset="img/qianxun/qxunlxwomen_2.png 2x, img/qianxun/qxunchakcping_3.png 3x">
+					</a>
+					<img class="goods-img-width" src="img/qianxun/qxungsdiyun.png" srcset="img/qianxun/qxungsdiyun_2.png 2x, img/qianxun/qxungsdiyun_3.png 3x">
+				</div>
+			</div>
+		</div>
+
+		<div class="ban-box">
+			<div class="goods-container-left">
+				<img class="banbg-img" src="img/qianxun/qxunshujvguanyvqxun_2.png" srcset="img/qianxun/qxunshujvguanyvqxun_3.png 2x, img/qianxun/qxunshujvguanyvqxun_3.png 3x" alt="">
+			</div>
+		</div>
+
+</div>
+
+<!--===================end千讯数据==================-->
+<!--=================千讯数据第三页===================-->
+
+  <div class="goods-container-pic">
+   	<div class="banner-box">
+			<img class="banner-bg-er" src="img/pic/jgebanner.png" srcset="img/pic/jgebanner_2.png 2x, img/pic/jgebanner_3.png 3x" alt="">
+		</div>
+		
+		<div class="goods-containe-san">
+			<div class="goods-left-con">
+				<div class="goods-detail">
+					<a href="" class="a-ahref"><img class="img-width" src="img/pic/jiage1069tongdao.png" srcset="img/pic/jiage1069tongdao_2.png 2x, img/pic/jiage1069tongdao_2.png 3x"></a>
+				</div>
+			</div>
+			
+			<div class="goods-left-con">
+				<div class="detail-bo">
+					 <div class="Purple">
+					 	 <a href="">体验包： 3000条     ￥199</a>
+					 </div>
+					 <div class="detail-Light-blue">
+					 	 <a href="">超值包： 10000条     ￥499</a>
+					 </div>
+				</div>
+			</div>
+			<div class="goods-right-con">
+				<div class="detail-bo">
+					 <div class="Purple-Light-blue">
+					 	 <a href="">基础包： 5000条     ￥299</a>
+					 </div>
+					 <div class="detail-right-blue">
+					 	 <a href="">超值包： 10000条     ￥499</a>
+					 </div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="goods-containe-san">
+			<div class="goods-left-con">
+				<div class="goods-detail">
+					<a href="" class="a-ahref"><img class="img-width" src="img/pic/jgekafatongdao.png" srcset="img/pic/jgekafatongdao_2.png 2x, img/pic/jgekafatongdao_3.png 3x"></a>
+				</div>
+			</div>
+			
+			<div class="goods-left-con">
+				<div class="detail-bo">
+					 <div class="Purple">
+					 	 <a href="">体验包： 5000条     ￥299</a>
+					 </div>
+					 <div class="detail-Light-blue">
+					 	 <a href="">超值包: 50000条  ￥2899</a>
+					 </div>
+				</div>
+			</div>
+			<div class="goods-right-con">
+				<div class="detail-bo">
+					 <div class="Purple-Light-blue">
+					 	 <a href="">基础包： 10000条     ￥599</a>
+					 </div>
+					 <div class="detail-right-blue">
+					 	 <a href="">超值包：100000条  ￥5499</a>
+					 </div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="goods-containe-san goods-con">
+			<div class="left_center">
+			 <dl>						
+			  <dd>
+			  	<a href=""><img class="banner-bg-san" src="img/pic/jiagedindao_2.png" srcset="img/pic/jiagedindao_2.png 2x, img/pic/jiagedindao_3.png 3x" alt=""></a>
+			  </dd>
+			  <dt>
+			 	 <h3>选择订单</h3>
+				 <p>自由购买条数购买优惠套餐选择不同通道</p>
+			  </dt>
+			 </dl>		
+		 </div>
+		 
+		 <div class="center_center">
+			 <dl>						
+			  <dd>
+			  	<a href=""><img class="banner-bg-san" src="img/pic/jiagegmaicpin_3.png" srcset="img/pic/jiagegmaicpin_3.png 2x, img/pic/jiagegmaicpin_3.png 3x" alt=""></a>
+			  </dd>
+			  <dt>
+			 	 <h3>购买产品</h3>
+				 <p>一对一专业客户咨询7×24小时在线咨询</p>
+			  </dt>
+			 </dl>		
+		 </div>
+		 
+		 <div class="left_center ri_right">
+			 <dl>						
+			  <dd>
+			  	<a href=""><img class="banner-bg-san" src="img/pic/jiageshiycpin_2.png" srcset="img/pic/jiageshiycpin_2.png 2x, img/pic/jiageshiycpin_3.png 3x" alt=""></a>
+			  </dd>
+			  <dt>
+			 	 <h3>使用产品</h3>
+				 <p>到达率高达率高达100%验证通知3秒必达</p>
+			  </dt>
+			 </dl>		
+		 </div>
+				
+			</div>
+			
+	</div>
+
+<!--===================end千讯数据==================--> 		
+<!--=================千讯数据第四页===================-->
+
+  <div class="Contact-us">
+  	<div class="banner-box">
+			<img class="banner-bg-er" src="img/about/lxwomenbanner.png" srcset="img/about/lxwomenbanner_2.png 2x, img/about/lxwomenbanner_3.png 3x" alt="">
+		</div>
+		
+		<form class="form-down" name="myform" method="post" action="" onsubmit="return checkUser();">
+		<dl>
+			<dd class="form-one">
+			     <label for="" class="lab">电话*</label>
+    	     <input type="text" placeholder="请输入您的手机号" class="fonts-tuo">
+    	</dd>
+      <dd class="form-tuo"> 
+         <label for="" class="lab">邮箱*</label>
+    	   <input type="text" placeholder="请输入您的邮箱" class="fonts-tuo">
+    	</dd>
+    	<dd class="form-tuo"> 
+         <label for="" class="lab">Q Q*</label>
+    	   <input type="text" placeholder="请输入您的QQ" class="fonts-tuo">
+    	</dd>
+    	<dd class="form-tuo"> 
+         <label for="" class="lab">微信*</label>
+    	   <input type="text" placeholder="请输入您的微信" class="fonts-tuo">
+    	</dd>
+    	<dd class="form-but">
+         <input type="button" value="提交" class="fonts-ture">
+      </dd>   
+       
+     </dl>   
+    </form>
+   
+	<div class="goods-containe-san">	
+    <div class="goods-left-con">
+				<div class="goods-detail">
+					<a href="" class="a-ahref"><img class="img-width" src="img/about/lxwomenditu.png" srcset="img/about/lxwomenditu_2.png 2x, img/about/lxwomenditu_3.png 3x"></a>
+				</div>
+		</div>
+		<div class="goods-left-con">
+				<div class="goods-left-container">
+				<div class="detail-b">
+				  <div class="font-size-px">深圳市千讯数据股份有限公司</div>
+				  <div class="font-size-p">电话：0755-26993620（总机）</div>
+				  <p class="font-size-p">手机：18682183221   高建华</p>
+				  <p class="font-size-p">邮箱：smsdaka@163.com</p>
+				  <p class="font-size-p">地址：深圳市南山区科技园南区留学生创业大厦二期17楼</p>
+				</div>
+		</div>
+  </div>
+ </div> 
+<!--===================end千讯数据==================--> 	
+</div>
+<!--===================end千讯数据==================-->
+
+</div>
+<!--=============endgoods-container==============-->
+</div>
+</div> 
+
+<!--==============footer-container===============-->
+<div class="footer-container">
+  <div class="footer-btn-container">
+    <div class="footer-btn-margin-container">
+      <div class="footer-btn-container-part">
+        <div class="footer-btn1 footer-btn1-active">电话咨询</div>
+        <div class="footer-btn2">在线地图</div>
+      </div>
+      <div class="footer-btn-container-part">
+      	<!--<div class="footer-button-middle">在线地图</div>-->
+        <div class="footer-btn3">在线留言</div>
+        <div class="footer-btn4">QQ咨询</div>
+      </div>
+   </div>
+  </div>
+</div>
+<!--============end footer-container==============-->  
+
+<!--===================千讯数据====================-->
+<div class="onload-container">
+  <div class="bailian-header bailian-header-transparent">
+    <div class="bailian-header-title"></div>
+    <div class="bailian-header-left-container">
+      <div class="bailian-header-left-return-container">
+        <div class="bailian-header-left-return-arrow-container">
+          <div class="common-table">
+            <div class="common-table-cell-middle-center">
+              <img class="bailian-header-left-return-arrow" src="img/my/nav_return_gray@2x.png"
+                   srcset="img/my/nav_return_gray@2x.png 2x,img/my/nav_return_gray@3x.png 3x" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loading-container">
+    <div class="loading-box">
+      <div class="loading-content">
+        <div class="rotate-box">
+          <img class="ic_loading" src="img/common/loading@2x.gif"
+               srcset="img/common/loading@2x.gif 2x , img/common/loading@3x.gif 3x" alt="">
+        </div>
+        <div class="loading-content-text">加载中...</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--====================end 千讯数据===================-->
+</body>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/iscroll-probe.js"></script>
+<script type="text/javascript">
+  (function ($, document) {
+    function mainResize() {
+      var fontSize = $(window).width() / 10;
+      $("html").css('font-size', fontSize + 'px');
+    }
+
+    mainResize();
+
+    $(window).resize(function () {
+      mainResize();
+    });
+    
+    
+     $('.font-ones').on('click', function () {
+      $('.popup-add-color').show();
+    });
+    $('.btn-finish').on('click', function () {
+      $('.popup-add-color').hide();
+    });
+    
+
+    $('.like-icon').bind('click', function () {
+      if ($(this).hasClass('like-select')) {
+        $(this).removeClass('like-select');
+      } else {
+        $(this).addClass('like-select');
+      }
+    });
+
+    $('.tag-select-container ul li').bind('click', function () {
+      $('.tag-select-container ul li').each(function (i, e) {
+        $(this).find(':first-child').removeClass('active');
+      });
+      $(this).find(':first-child').addClass('active');
+    });
+
+    $('.footer-btn1').bind('click', function () {
+      $(this).addClass('footer-btn1-active');
+      $('.footer-btn2').removeClass('footer-btn2-active')
+      $('.footer-btn3').removeClass('footer-btn3-active')
+      $('.footer-btn4').removeClass('footer-btn4-active')
+    });
+
+    $('.footer-btn2').bind('click', function () {
+      $(this).addClass('footer-btn2-active');
+      $('.footer-btn1').removeClass('footer-btn1-active')
+      $('.footer-btn3').removeClass('footer-btn3-active')
+      $('.footer-btn4').removeClass('footer-btn4-active')
+    });
+
+    $('.footer-btn3').bind('click', function () {
+      $(this).addClass('footer-btn3-active');
+      $('.footer-btn1').removeClass('footer-btn1-active')
+      $('.footer-btn2').removeClass('footer-btn2-active')
+      $('.footer-btn4').removeClass('footer-btn4-active')
+    });
+
+    $('.footer-btn4').bind('click', function () {
+      $(this).addClass('footer-btn4-active');
+      $('.footer-btn1').removeClass('footer-btn1-active')
+      $('.footer-btn2').removeClass('footer-btn2-active')
+      $('.footer-btn3').removeClass('footer-btn3-active')
+    });
+
+    //刷新页面回调
+    function refreshData() {
+      console.log('refreshData');
+
+      setTimeout(function () {
+//      刷新滚动区域高度
+        myScroll.refresh();
+        //获取完数据后还原loading状态
+        resetLoadingElements();
+      }, 3000);
+    }
+
+    //加载更多数据回调
+    function loadMoreData() {
+      console.log('loadMoreData');
+      setTimeout(function () {
+        $('.goods-left-container').append('<div class="goods-detail-box">' + '<img class="same-style-img" src="img/index/img_1@2x.png">' + '</div>');
+//      刷新滚动区域高度
+        myScroll.refresh();
+        //获取完数据后还原loading状态
+        resetLoadingElements();
+      }, 3000);
+    }
+
+    var isLoading = false;
+
+    function resetLoadingElements() {
+      isLoading = false;
+
+      $('.pull-down').removeClass('animate');
+      $('.pull-down-box').removeClass('loading');
+      $('.pull-up').removeClass('animate');
+    }
+
+    var myScroll;
+
+    window.onload = function () {
+      var pullDownOffset = $('.pull-down-box').outerHeight();
+      $('.onload-container').hide();
+
+      myScroll = new IScroll('.goods-container', {
+        click: true,
+        scrollX: false,
+        scrollY: true,
+        mouseWheel: true,
+        probeType: 2
+      });
+
+      myScroll.on('scroll', function () {
+        if (isLoading) {
+          return;
+        }
+
+        if (this.y > pullDownOffset) {
+          if (!$('.pull-down').hasClass('animate')) {
+            $('.pull-down').addClass('animate');
+            $('.pull-down-box').addClass('loading');
+            this.scrollTo(0, 0, 0);
+          }
+        } else if (this.y < 0) {
+          if ($('.pull-down').hasClass('animate')) {
+            $('.pull-down').removeClass('animate');
+            $('.pull-down-box').removeClass('loading');
+            this.scrollBy(0, pullDownOffset, 0);
+          }
+        }
+
+        if (this.y < this.maxScrollY) {
+          $('.pull-up').addClass('animate');
+        } else if (this.y < this.maxScrollY) {
+          $('.pull-up').removeClass('animate');
+        }
+      });
+
+      myScroll.on('scrollEnd', function () {
+        if (isLoading) {
+          return;
+        }
+
+        if ($('.pull-down').hasClass('animate')) {
+        	isLoading = true;
+          refreshData();
+        }
+
+        if ($('.pull-up').hasClass('animate') && this.maxScrollY + 1 > this.y) {
+          isLoading = true;
+          loadMoreData();
+        }
+      });
+    };
+
+ $('.tag-select-container ul li div').bind('click', function() {
+         // 获取单击标签
+         var that = $(this);
+         console.log(that);
+         
+         $('.active').removeClass('active');
+         that.addClass('active');
+         // 隐藏这个内容区（.mian的子标签）
+         $('#scroller>div').hide();
+         // 判断是单击了哪个li标签
+         // 如果是.nav-index标签，
+          if(that.hasClass('nav-home')) {
+            // 如果是.nav-index标签，
+            // 显示.index内容
+            $('.goods-container-home').show();
+          } else if(that.hasClass('nav-data')) {
+            // 如果是.nav-data标签，
+            // 显示.data内容
+            $('.goods-container-er').show();
+          } else if(that.hasClass('nav-pic')) {
+            // 如果是.nav-about标签，
+            // 显示.about内容
+            $('.goods-container-pic').show();
+          } else if(that.hasClass('nav-about')) {
+          	$('.Contact-us').show();
+            // 其他，
+            // 显示.index 内容,
+          }else {
+            // 显示.index 内容
+            $('.goods-container-home').show();
+          }
+   });
+})(jQuery, document);
+</script>
+</html>
