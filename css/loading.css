@@ -1,0 +1,98 @@
+.onload-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.loading-container * {
+  position: relative;
+}
+
+.loading-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  display: table;
+}
+
+.bailian-header-transparent {
+  background-color: #f5f5f5;
+}
+
+.bailian-header-title {
+  width: 100%;
+  height: 1.17333333rem;
+}
+
+.loading-box {
+  width: 2rem;
+  /*height: 2rem;*/
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.loading-content {
+  width: 100%;
+  /*height: 1.5rem;*/
+}
+
+.rotate-box {
+  /*width: 1.5rem;*/
+  /*height: 1.5rem;*/
+  margin: auto;
+  /*background: url("../img/common/ic_circular_shadow@2x.png") no-repeat center;*/
+  /*background-size: 1.49333333rem 1.46666667rem;*/
+  overflow: hidden;
+}
+
+.ic_loading {
+  margin: auto;
+  width: 2.28rem;
+}
+
+.ic_semicircle_1 {
+  width: 0.72rem;
+  height: 0.72rem;
+  margin: 0.35rem auto 0 auto;
+  -webkit-animation: ic_semicircle_1 1s infinite linear;
+}
+
+@-webkit-keyframes ic_semicircle_1 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.ic_semicircle {
+  position: absolute;
+  left: 0.39rem;
+  top: 0.35rem;
+  width: 0.72rem;
+  height: 0.72rem;
+  margin: auto;
+  -webkit-animation: ic_semicircle 1s infinite linear;
+}
+
+@-webkit-keyframes ic_semicircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-content-text {
+  font-size: 0.4rem;
+  color: #999999;
+  text-align: center;
+}
